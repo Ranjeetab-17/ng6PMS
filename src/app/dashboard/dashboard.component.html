@@ -1,0 +1,64 @@
+<h2 mat-line class="customHeading">
+  PMS Tracking
+</h2>
+ 
+<img mat-card-avatar src="https://source.unsplash.com/random/200x200" [matMenuTriggerFor]="menu" class="customMenu" style="width:60px;height:60px;cursor: pointer;">
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <mat-icon svgIcon="account"></mat-icon>
+    Ranjeet Prajapati
+  </button>
+  <button mat-menu-item>
+    <mat-icon svgIcon="email"></mat-icon>
+    ranjeetab17@gmail.com</button>
+  <button mat-menu-item>
+    <mat-icon svgIcon="account-settings"></mat-icon>
+    About</button>
+  <button mat-menu-item>
+    <mat-icon svgIcon="settings"></mat-icon>
+    Setting</button>
+  <button mat-menu-item>
+    <mat-icon svgIcon="phone"></mat-icon>
+    8767777640</button>
+  <button mat-menu-item [routerLink]='["../login"]'>
+    <mat-icon svgIcon="fingerprint"></mat-icon>
+    Logout</button>
+</mat-menu>
+
+<div>
+  <router-outlet>
+  </router-outlet>
+</div>
+<div mat-card-avatar class="example-header-image"></div>
+<div class="done" fxLayout="column" fxLayoutGap="15px" fxLayoutAlign="space-between end">
+
+  <a mat-mini-fab color="accent" matBadge="25" matBadgeColor="warn" matTooltip="Pending Task" [matTooltipPosition]="position">
+    <mat-icon svgIcon="alert-outline"></mat-icon>
+  </a>
+
+  <a mat-mini-fab color="warn" matTooltip="Add user" [matTooltipPosition]="position" [routerLink]='["adduser"]'>
+    <mat-icon svgIcon="account-plus"></mat-icon>
+  </a>
+
+  <a mat-mini-fab color="warn" matTooltip="Add new work" [matTooltipPosition]="position" [routerLink]='["addwork"]'>
+    <mat-icon svgIcon="briefcase-outline"></mat-icon>
+  </a>
+
+  <a mat-mini-fab color="warn" matTooltip="Comments" [matTooltipPosition]="position" [routerLink]='["addwork"]'>
+    <mat-icon svgIcon="comment"></mat-icon>
+  </a>
+
+  <a mat-mini-fab mat-fab-bottom-right color="primary" matTooltip="Work List" [matTooltipPosition]="position" [routerLink]='["worklist"]'>
+    <mat-icon svgIcon="view-list"></mat-icon>
+  </a>
+
+  <a mat-mini-fab matTooltip="Export To PDF" [matTooltipPosition]="position" color="warn">
+    <mat-icon svgIcon="file-pdf-box"></mat-icon>
+  </a>
+
+  <a mat-mini-fab matTooltip="Export To Excel" [matTooltipPosition]="position" color="primary">
+    <mat-icon svgIcon="file-excel-box"></mat-icon>
+  </a>
+
+</div>
